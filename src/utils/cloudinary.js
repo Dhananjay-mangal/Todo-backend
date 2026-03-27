@@ -16,7 +16,7 @@ const uploadOnCloudinary = async (LocalFilePath) => {
             folder:"todo-app"
         })
         fs.unlinkSync(LocalFilePath) // remove the locally saved temporary file
-        return response.secure_url
+        return response
     } catch (error) {
         fs.unlinkSync(LocalFilePath) // remove the locally saved temporary file
         console.error("Error uploading to Cloudinary:", error)
